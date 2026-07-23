@@ -8,12 +8,25 @@ nmetadata:
   hermes:
     tags: [head-neck, radiotherapy, definitive, oropharynx, radical, SIB]
     related_skills: [port-oropharynx-postop, neoadjuvant-deescalation]
-    triggers_on: [根治性放疗, 非手术, 根治性放化疗, definitive RT, radical RT, 同步放化疗, CRT, 诱导化疗, induction]
+    triggers_on: [口咽根治, 口咽根治性放疗, 口咽SIB, 口咽非手术, 扁桃体根治, 舌根根治, 诱导化疗后口咽, HPV+口咽, oropharynx definitive, oropharynx SIB, 70Gy口咽]
 ---
 
 # 口咽癌根治性（非手术）放疗靶区勾画
 
-> **自包含模块** —— 口咽癌未手术、行根治性放疗/放化疗时加载。
+## 🔑 铁律清单
+
+| # | 铁律 | 触发条件 |
+|---|------|---------|
+| 1 | **SIB(70/63/56 Gy 33fx)** | 所有口咽根治性RT |
+| 2 | **GTV基于增强MRI+内镜** | 所有口咽根治性RT |
+| 3 | **诱导化疗后GTV=化疗前范围+化疗后残留** | 诱导化疗后 |
+| 4 | **RP双侧必照** | 口咽癌一律 |
+| 5 | **II区高危至颅底** | 口咽癌N+ |
+| 6 | **p16+→降阶梯方案参考** | p16阳性 |
+| 7 | **中线原发→双侧颈** | 舌根/软腭/近中线 |
+| 8 | **咽后间隙+椎前筋膜纳入** | 咽后壁/后部肿瘤 |
+
+> **自包含模块**
 > 若患者有诱导化疗史，参见第三节（GTV 退缩后处理）。
 > 若为术后 PORT，改用 `port-oropharynx-postop`。
 >
