@@ -4,7 +4,7 @@ description: "Oropharynx definitive (non-surgical) radiotherapy — GTV-based ta
 version: 1.0.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: MIT
-nmetadata:
+metadata:
   hermes:
     tags: [head-neck, radiotherapy, definitive, oropharynx, radical, SIB]
     related_skills: [port-oropharynx-postop, neoadjuvant-deescalation]
@@ -17,7 +17,7 @@ nmetadata:
 
 | # | 铁律 | 触发条件 |
 |---|------|---------|
-| 1 | **SIB(70/63/56 Gy 33fx)** | 所有口咽根治性RT |
+| 1 | **SIB(70/63/56 Gy 35fx)** | 所有口咽根治性RT |
 | 2 | **GTV基于增强MRI+内镜** | 所有口咽根治性RT |
 | 3 | **诱导化疗后GTV=化疗前范围+化疗后残留** | 诱导化疗后 |
 | 4 | **RP双侧必照** | 口咽癌一律 |
@@ -198,13 +198,13 @@ nmetadata:
 | 脊髓 Dmax | ≤ 45 Gy | ❌ 退回 |
 | 视交叉 Dmax | ≤ 54 Gy | ❌ 退回 |
 | 视神经 Dmax | ≤ 54 Gy | ❌ 退回 |
-| 晶状体 Dmax | ≤ 10 Gy | ❌ 退回 |
 
 ### 5.2 软约束（口咽癌专属优先级）
 
 | OAR | 约束 | 优先级 | 超标时 |
 |-----|------|:--:|------|
 | **对侧腮腺 Dmean** | ≤ 26 Gy | 🔴 最高 | 不可逆口干→牺牲靶区边缘 |
+| 晶状体 Dmax | ≤ 10 Gy（优先），硬上限 ≤ 25 Gy（RTOG 0615） | 🔴 最高 | 白内障风险可接受——不可因晶状体牺牲靶区 |
 | 患侧腮腺 Dmean | ≤ 30 Gy | 🟡 | 尽量保护 |
 | 下颌骨 Dmax | ≤ 70 Gy | 🟡 | V60<30% |
 | 咽缩肌 Dmean | ≤ 50 Gy | 🟡 | 吞咽困难有康复 |
